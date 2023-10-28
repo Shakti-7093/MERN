@@ -11,6 +11,14 @@ app.use(cookieParser());
 
 app.use(express.json())
 
+app.use(cors(
+    {
+        origin: "https://client-github-io.vercel.app",
+        method: ["POST","GET"],
+        credentails: true
+    }
+))
+
 app.use(require('./router/auth'));
 
 const PORT = process.env.PORT || 5000;
