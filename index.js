@@ -1,7 +1,6 @@
 const dotenv = require("dotenv");
 const express = require("express");
 const cookieParser = require('cookie-parser');
-const cors = require('cors');
 const app = express();
 
 dotenv.config({path:'./config.env'});
@@ -11,14 +10,6 @@ const User = require('./model/userSchema');
 app.use(cookieParser());
 
 app.use(express.json())
-
-app.use(cors(
-    {
-        origin: "https://client-github-io.vercel.app",
-        method: ["POST","GET"],
-        credentails: true
-    }
-))
 
 app.use(require('./router/auth'));
 
