@@ -15,21 +15,20 @@ app.use(require('./router/auth'));
 
 const PORT = process.env.PORT || 5000;
 
-// app.get('/about',(req,res)=>{
-//     res.send("This is About Page")
-// });
+app.get('/about',(req,res)=>{
+    res.render("./router/auth.js")
+});
 
-// app.get('/contact',(req,res)=>{
-//     res.cookie("test", 'shakti');
-//     res.send("This is Contact Page")
-// });
+app.get('/contact',(req,res)=>{;
+    res.render("./router/auth.js")
+});
 
 app.get('/signin',(req,res)=>{
-    res.send("This is LogIn Page")
+    res.render("./router/auth.js")
 });
 
 app.get('/signup',(req,res)=>{
-    res.send("This is Registration Page")
+    res.render("./router/auth.js")
 });
 
 app.listen(PORT, ()=>{
