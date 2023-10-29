@@ -14,7 +14,7 @@ app.use(express.json())
 
 app.use(cors(
     {
-        origin: "https://client-github-io.vercel.app/",
+        origin: "https://client-github-io.vercel.app",
         method: ["POST","GET"],
         credentails: true
     }
