@@ -3,7 +3,7 @@ const express = require("express");
 const cookieParser = require('cookie-parser');
 const app = express();
 
-dotenv.config({path:'./config.env'});
+dotenv.config({path:'.env'});
 
 require('./db/connection');
 const User = require('./model/userSchema');
